@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        #leftside{
+            width: 30%;
+            background-color: rgb(61, 152, 236);
+            color: aliceblue;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-family: "Open Sans", Arial;
+        }
+        #leftside>div:nth-child(1){
+            text-align: center;
+            width: 58%;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #leftside>div:nth-child(1)>p{
+            font-size: 12px;
+            margin-top: 0px;
+            opacity: 0.5;
+        }
+        #leftside>div:nth-child(2){
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            opacity: 0.8;
+        }
+        #leftside>div:nth-child(3),#leftside>div:nth-child(4),#leftside>div:nth-child(5){
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            margin: auto;
+            margin-top: 30px;
+
+        }
+        #leftside>div:nth-child(3)>img,#leftside>div:nth-child(4)>img,#leftside>div:nth-child(5)>img{
+            width: 30%;
+            height: 70px;
+            margin-top: 40px;
+        }
+        #leftside>div:nth-child(5)>img{
+            height: 50px;
+        }
+        #leftside>div:nth-child(3)>div,#leftside>div:nth-child(4)>div,#leftside>div:nth-child(5)>div{
+            width: 50%;
+            font-size: 12px;
+
+        }
+        #rightside{
+            width: 70%;
+        }
+        #rightside>div:nth-child(1){
+            width: 35%;
+            border: 0px solid black;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+        #rightside>div:nth-child(3){
+            width: 35%;
+            border: 0px solid black;
+            margin: auto;
+            text-align: center;
+            margin-top: -10px;
+        }
+        #rightside>div:nth-child(4){
+            width: 35%;
+            border: 0px solid black;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+        #rightside>div>img{
+            width: 235px;
+        }
+        #rightside>form{
+            width: 45%;
+            border: 0px solid black;
+            padding: 30px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            color:  rgb(65, 63, 63);
+            text-align: center;
+            opacity: 0.8;
+        }
+        #rightside>form>div{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            border: 0px solid black;
+        }
+        #rightside>form>div>p{
+            width: 90%;
+            font-size: 12px;
+        }
+        #rightside>form>div>input{
+            height: 30px;
+            text-align: justify;
+            
+        }
+        #rightside>form>input{
+            width: 70%;
+            padding: 10px;
+            margin: auto;
+            border-radius: 30px;
+            border: 1px solid grey;
+            background-color: rgb(246, 252, 255);
+            font-family: "Open Sans", Arial;
+            opacity: 0.8;
+        }
+        #rightside>form>input:nth-child(6){
+            width: 75%;
+            background-color: rgb(66, 118, 216);
+            color: aliceblue;
+            opacity: 1;
+        }
+        #rightside>form>h2{
+            text-align: center;
+            font-family: "Open Sans", Arial;
+            font-size: 20px;
+        }
+        #other_option{
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            width: 45%;
+        }
+        #other_option>p{
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.6;
+            
+        }
+        #other_option>div{
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        #other_option>div>button{
+            border-radius: 20px;
+            width: 50%;
+            display: flex;
+            padding: 5px;
+            justify-content: space-around;
+            border: 1px solid grey;
+        }
+        #other_option>div>button:nth-child(1)>img{
+            width: 30px;
+        }
+        #other_option>div>button:nth-child(2)>img{
+            width: 15px;
+        }
+        #other_option>div>button:nth-child(3)>img{
+            width: 15px;
+        }
+        #other_option>div>button:nth-child(3){
+            gap: 15px;
+        }
+        #other_option>div>button:nth-child(3).innerText{
+            margin-top: 5px;
+        }
+        #bottom{
+            width: 30%;
+            font-family: "Open Sans", Arial;
+            color:  rgb(65, 63, 63);
+            font-size: 13px;
+        }
+        #bottom>h4>a{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="leftside">
+        <div>
+            <img src="https://auth.ayoa.com/images/signup/rating.png" alt="error">
+            <p>1000+ reviews across Capterra, App store and Google Play</p>
+        </div>
+        <div>
+            <p>Join over 1.5 million people who love using our software solutions to help them achieve great things.</p>
+        </div>
+        <div>
+            <img src="https://auth.ayoa.com/images/signup/mindmap.png" alt="">
+            <div>
+                <h4>Capture your best ideas</h4>
+                <p>When faced with a project or decision, use the power of Mind Mapping in Ayoa to explore all of your creative solutions.</p>
+            </div>
+        </div>
+        <div>
+            <img src="https://auth.ayoa.com/images/signup/task.png" alt="">
+            <div>
+                <h4>Turn ideas into actions</h4>
+                <p>Transform your ideas into actionable tasks you can track from planning to execution. Assign teammates, add comments and attach files.</p>
+            </div>
+        </div>
+        <div>
+            <img src="https://auth.ayoa.com/images/signup/planner.png" alt="">
+            <div>
+                <h4>Manage your priorities</h4>
+                <p>Productivity isn't just about getting stuff done, but getting the right stuff done. Manage your workload to perfection with the flexibility of your Ayoa Planner.</p>
+            </div>
+        </div>
+    </div>
+    <div id="rightside">
+        <div><img src="https://auth.ayoa.com/images/ayoa-icon-logo.png" alt="error"></div>
+        <form>
+            <h2>Create your account below to get started</h2>
+            <input type="text" placeholder="First and last name">
+            <input type="text" placeholder="Email address">
+            <input type="password" placeholder="Create password">
+            <div>
+                <input type="checkbox"> <p>I agree to the Ayoa Terms & Conditions, License Agreement, Privacy Policy and consent to receive relevant marketing communications. I understand that I am able to change my email preferences at any time.</p>
+            </div>
+            <input type="submit" value="SIGN UP - IT'S FREE">
+        </form>
+        <div id="other_option">
+            <p>or sign up with:</p>
+            <div>
+                <button><img src="https://blog.hubspot.com/hubfs/image8-2.jpg" alt=""> Google</button>
+                <button><img src="https://cdn.iconscout.com/icon/free/png-64/facebook-262-721949.png" alt=""> Facebook</button>
+                <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/488px-Apple_logo_black.svg.png?20211218170823" alt=""> Apple</button>
+            </div>
+        </div>
+        <div id="bottom">
+            <h4>Don't have an account? <a href="signin.html">Sign in</a></h5>
+            <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+        </div>
+    </div>
+</body>
+</html>

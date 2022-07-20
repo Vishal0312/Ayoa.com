@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>div{
+            width: 18%;
+            border: 0px solid black;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+        body>div>img{
+            width: 85px;
+        }
+        form{
+            width: 23%;
+            border: 0px solid black;
+            padding: 30px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color:  rgb(65, 63, 63)
+        }
+        form>input{
+            padding: 10px;
+            border-radius: 30px;
+            border: 1px solid grey;
+            background-color: rgb(246, 252, 255);
+            font-family: "Open Sans", Arial;
+        }
+        form>input:nth-child(4){
+            background-color: rgb(66, 118, 216);
+            color: aliceblue;
+        }
+        form>h2{
+            text-align: center;
+            font-family: "Open Sans", Arial;
+            font-size: 20px;
+            font-weight: none;
+        }
+        #other_option{
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            width: 25%;
+            margin-top: -20px;
+        }
+        #other_option>p{
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.8;
+            
+        }
+        #other_option>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        #other_option>div>button{
+            border-radius: 20px;
+            width: 30%;
+            display: flex;
+            padding: 5px;
+            justify-content: space-around;
+            border: 1px solid grey;
+        }
+        #other_option>div>button:nth-child(1)>img{
+            width: 30px;
+        }
+        #other_option>div>button:nth-child(2)>img{
+            width: 15px;
+        }
+        #other_option>div>button:nth-child(3)>img{
+            width: 15px;
+        }
+        #other_option>div>button:nth-child(3){
+            gap: 15px;
+        }
+        #other_option>div>button:nth-child(3).innerText{
+            margin-top: 5px;
+        }
+        #bottom{
+            width: 30%;
+            font-family: "Open Sans", Arial;
+            color:  rgb(65, 63, 63);
+            font-size: 13px;
+        }
+        #bottom>h4>a{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div><img src="https://auth.ayoa.com/images/ayoa-icon.png" alt="error"></div>
+    <form>
+        <h2>Sign in to Ayoa</h2>
+        <input type="text" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="SIGN IN WITH EMAIL">
+    </form>
+    <div id="other_option">
+        <p>or sign in with:</p>
+        <div>
+            <button><img src="https://blog.hubspot.com/hubfs/image8-2.jpg" alt=""> Google</button>
+            <button><img src="https://cdn.iconscout.com/icon/free/png-64/facebook-262-721949.png" alt=""> Facebook</button>
+            <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/488px-Apple_logo_black.svg.png?20211218170823" alt=""> Apple</button>
+        </div>
+    </div>
+    <div id="bottom">
+        <h4>Don't have an account? <a href="signup.html">Sign up</a></h5>
+        <p>Forgot password?</p>
+        <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+    </div>
+</body>
+</html>
