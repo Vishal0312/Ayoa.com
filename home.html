@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            display: flex;
+            justify-content: space-between;
+            padding: 14px;
+        }
+        #navbar>div>img{
+            width: 170px;
+        }
+        #navbar>div{
+            display: flex;
+            justify-content: space-around;
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            font-size: 15px;
+        }
+        #navbar>div:nth-child(2){
+            width: 47%;
+        }
+        #navbar>div>div{
+            margin-top: 15px;
+            width: 14%;
+            text-align: center;
+            opacity: 0.7;
+        }
+        #navbar>div>button{
+            width: 15%;
+            border-radius: 30px;
+            font-size: 14px;
+            opacity: 0.7;
+            border: 1px solid grey;
+            color: rgb(65, 63, 63);
+            height: 43px;
+            background-color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        #heading{
+            width: 63%;
+            margin: auto;
+            margin-top: -50px;
+            font-family: "Open Sans", Arial;
+            text-align: center;
+        }
+        #heading>h1{
+            
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        #heading>p{
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            width: 90%;
+            color: rgb(65, 63, 63);
+            opacity: 0.9;
+
+        }
+        #inputemail{
+            width: 40%;
+            height: 60px;
+            text-align: center;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            border: 0px solid black;
+            padding: 5px;
+            justify-content: space-around;
+            box-shadow: 0 0 0 0.5em #c6e4f3;
+        }
+        #inputemail>input{
+            width: 60%;
+            border: none;
+        }
+        #inputemail>a{
+            width: 36%;
+        }
+        #inputemail>a>button{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: rgb(48, 135, 248);
+            color: aliceblue;
+            font-size: 22px;
+            border: none;
+        }
+        #bigdis{
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+        #reviews{
+            width: 74%;
+            margin-top: 30px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+        }
+        #reviews>div>div{
+            height: 30px;
+            display: block;
+        }
+        #reviews>div>div:nth-child(2){
+            opacity: 0.6;
+        }
+        #reviews>div>div>img{
+            width: 60%;
+        }
+        #firstvedio{
+            display: flex;
+            margin-top: 100px;
+            justify-content: space-between;
+        }
+        #firstvedio>div{
+            width: 50%;
+        }
+        #firstvedio>div:nth-child(1)>img{
+            width: 30%;
+            justify-content: center;
+        }
+        #firstvedio>div+div>h1{
+            font-size: 52px;
+            font-weight: 800;
+            font-family: "Open Sans",sans-serif
+        }
+        #firstvedio>div+div>p{
+            width: 90%;
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            font-size: 18px;
+            line-height: 26px;
+            opacity: 0.6;
+        }
+        #firstvedio>div+div>button{
+            padding: 15px;
+            background-color: white;
+            color:rgb(150, 161, 175);
+            font-size: 20px;
+            font-weight: 600;
+            border: 2px solid rgb(150, 161, 175);
+            margin-top: 30px;
+        }
+        #firstvedio>div+div>button:hover{
+            color:rgb(102, 180, 216);
+            border: 2px solid rgb(102, 180, 216);
+        }
+        #heading2{
+            width: 60%;
+            margin: auto;
+            margin-top: 70px;
+            text-align: center;
+        }
+        #heading2>h1{
+            font-size: 53px;
+            font-weight: 800;
+            font-family: "Open Sans",sans-serif;
+            margin-bottom: 18px;
+        }
+        #heading2>p{
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            font-size: 18px;
+            line-height: 26px;
+            opacity: 0.6;
+        }
+        #buttons{
+            width: 75%;
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        #buttons>button{
+            width: 12;
+            background-color: white;
+            border: none;
+        }
+        #buttons>button>img{
+            width: 20%;
+        }
+        #buttons>button>div{
+            font-weight: 600px;
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            font-size: 18px;
+            font-weight: bolder;
+            opacity: 0.7;
+        }
+        #buttonsdiv{
+            width: 75%;
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            margin-top: 70px;
+        }
+        #buttonsdiv>div+div>img{
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #buttonsdiv>div+div{
+            border-radius: 10px;
+        }
+        #buttonsdiv>div>div>h1{
+            color: rgb(17, 150, 202);
+            font-size: 40px;
+            font-family: "Open Sans", Arial;
+        }
+        #buttonsdiv>div>div>p{
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            font-size: 20px;
+            width: 90%;
+            opacity: 0.6;   
+        }
+        #buttonsdiv>div{
+            width: 50%;
+        }
+        #buttonsdiv>div>div+div{
+            display: flex;
+            gap: 24px;
+        }
+        #buttonsdiv>div>div+div{
+            width: 80%;
+            font-family: "Open Sans", Arial;
+            color: rgb(65, 63, 63);
+            opacity: 0.6;
+            border-bottom: 1px solid rgb(65, 63, 63);
+            border-top:  1px solid rgb(65, 63, 63);
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/ayoa_bluenavlogo.svg" alt="error"></div>
+        <div>
+            <div>Home</div>
+            <div>Why Ayoa?</div>
+            <div>Uses</div>
+            <div>Inclusivity</div>
+            <div>Resources</div>
+            <div>Pricing</div>
+            <Button>Log In</Button>
+        </div>
+    </div>
+    <div id="heading">
+        <h1>Be different, work visually</h1>
+        <p>Try the world’s most visual productivity app. Supercharge thinking, planning and learning with AI, mind maps, task boards and more</p>
+    </div>
+    <div id="inputemail">
+        <input type="text" placeholder="Enter your Email">
+        <a href="signup.html"><button>Get started</button></a>
+    </div>
+    <div id="bigdis">
+        <img src="https://www.ayoa.com/wp-content/uploads/2021/11/ayoa_allinone.webp" alt="error">
+    </div>
+    <div id="reviews">
+        <div>
+            <div><img src="https://www.ayoa.com/wp-content/uploads/2018/05/cbsnews_logo.png" alt=""></div>
+            <p>“The most unique twist on task management I’ve ever seen”</p>
+        </div>
+        <div>
+            <div><img src="https://www.ayoa.com/wp-content/uploads/2018/05/techcrunch-logo.png" alt=""></div>
+            <p>“Visually-oriented people – this layout boosts productivity”</p>
+        </div>
+        <div>
+            <div><img src="https://www.ayoa.com/wp-content/uploads/2019/09/logo-lhacker.png" alt=""></div>
+            <p>“Turns your tasks into an awesome venn diagram”</p>
+        </div>
+        <div>
+            <div><img src="https://www.ayoa.com/wp-content/uploads/2019/09/logo-pcworld.png" alt=""></div>
+            <p>“A more intuitive way to manage workloads”</p>
+        </div>
+    </div>
+    <div id="firstvedio">
+        <div>
+            <video width="620" height="340" controls autoplay>
+                <source src=”https://www.ayoa.com/wp-content/uploads/2019/07/ayoa_webcut_video.mp4” type=video/mp4>
+              </video>
+        <img src="https://www.ayoa.com/wp-content/uploads/2019/07/clicktowatchfull_drkblue@2x.png" alt="">
+        </div>
+        
+        <div>
+            <h1>See Ayoa in action</h1>
+            <p>The all-in-one mind mapping, collaboration and task management app. See how you can achieve your best work.</p>
+            <button>Watch vedio</button>
+        </div>
+    </div>
+    <div id="heading2">
+        <h1>Unrivaled flexibility</h1>
+        <p>Whether you’re brainstorming ideas, presenting in meetings, or managing tasks, Ayoa provides you with flexibility and intuitive working methods <b>every step of the way</b>.</p>
+    </div>
+    <div id="buttons">
+        <button>
+            <img src="https://www.ayoa.com/wp-content/uploads/2020/10/organic.svg" alt="error">
+            <div>Mind maps</div>
+        </button>
+        <button>
+            <img src="https://www.ayoa.com/wp-content/uploads/2020/10/whiteboard.svg" alt="error">
+            <div>Whiteboards</div>
+        </button>
+        <button>
+            <img src="https://www.ayoa.com/wp-content/uploads/2020/10/workflow.svg" alt="">
+            <div>Workflow</div>
+        </button>
+        <button>
+            <img src="https://www.ayoa.com/wp-content/uploads/2020/10/canvas.svg" alt="">
+            <div>Canvas</div>
+        </button>
+        <button>
+            <img src="https://www.ayoa.com/wp-content/uploads/2020/10/gantt.svg" alt="">
+            <div>Gantt</div>
+        </button>
+        <button>
+            <img src="https://www.ayoa.com/wp-content/uploads/2020/10/radial.svg" alt="">
+            <div>Radial</div>
+        </button>
+        <button>
+            <img src="https://www.ayoa.com/wp-content/uploads/2022/06/catpuremaps.svg" alt="">
+            <div>Capture</div>
+        </button>
+    </div>
+    <div id="buttonsdiv">
+        <div>
+            <div>
+                <h1>Mind maps</h1>
+                <p>Mind Mapping is proven to boost productivity, creativity and memory. Grow ideas, structure information, and see the whole picture.</p>             </p>
+            </div>
+            <div>
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/11/mm_thumbnail_new.png" alt="">
+                <div>
+                    <h3>How to use mind maps</h3>
+                    <p>02:22</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="https://www.ayoa.com/wp-content/uploads/2021/03/Unrivaled_mm_new_webp.webp" alt="">
+        </div>
+    </div>
+</body>
+</html>
