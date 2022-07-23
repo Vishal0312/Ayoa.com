@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ayoa</title>
     <style>
         body>div{
-            width: 18%;
+            width: 200px;
             border: 0px solid black;
             margin: auto;
             text-align: center;
             margin-top: 30px;
+            margin-bottom: 28px;
         }
         body>div>img{
             width: 85px;
         }
         form{
-            width: 23%;
+            width: 300px;
+            margin-top: 60px;
             border: 0px solid black;
             padding: 30px;
             margin: auto;
@@ -46,7 +48,7 @@
         #other_option{
             font-family: "Open Sans", Arial;
             color: rgb(65, 63, 63);
-            width: 25%;
+            width: 330px;
             margin-top: -20px;
         }
         #other_option>p{
@@ -62,10 +64,11 @@
         #other_option>div>button{
             border-radius: 20px;
             width: 30%;
+            background-color: white;
             display: flex;
             padding: 5px;
             justify-content: space-around;
-            border: 1px solid grey;
+            border: 1px solid rgb(206, 205, 205);
         }
         #other_option>div>button:nth-child(1)>img{
             width: 30px;
@@ -83,7 +86,7 @@
             margin-top: 5px;
         }
         #bottom{
-            width: 30%;
+            width: 340px;
             font-family: "Open Sans", Arial;
             color:  rgb(65, 63, 63);
             font-size: 13px;
@@ -91,14 +94,26 @@
         #bottom>h4>a{
             margin-left: 10px;
         }
+        #foot{
+            width: 200;
+            border-top: 1px solid rgb(134, 127, 127);
+            position: sticky;
+            bottom: 0px;
+            z-index: 1000;
+            background-color: white;
+        }
+        #foot>img{
+            width: 130px;
+            height: 60px;
+        }
     </style>
 </head>
 <body>
     <div><img src="https://auth.ayoa.com/images/ayoa-icon.png" alt="error"></div>
     <form>
         <h2>Sign in to Ayoa</h2>
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <input type="text" id="eml" placeholder="Email">
+        <input type="password" id="pass" placeholder="Password">
         <input type="submit" value="SIGN IN WITH EMAIL">
     </form>
     <div id="other_option">
@@ -114,5 +129,28 @@
         <p>Forgot password?</p>
         <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
     </div>
+    <div id="foot">
+        <img src="https://auth.ayoa.com/images/og_logo.svg" alt="">
+    </div>
 </body>
 </html>
+<script>
+    document.querySelector("form").addEventListener("submit", function2);
+
+    function function2(){
+        event.preventDefault();
+        let emailto = document.querySelector("#eml").value;
+        let passto = document.querySelector("#pass").value;
+        let data = JSON.parse(localStorage.getItem("LSData")) || [];
+        for(let i=0;i<data.length;i++){
+            if(emailto == data[i].email && passto == data[i].password){
+                alert("login Successful");
+                return;
+            }
+            
+        }
+        alert("details not matched");
+    }
+
+   
+</script>
