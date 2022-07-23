@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ayoa</title>
     <style>
         #navbar{
             display: flex;
             justify-content: space-between;
             padding: 14px;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            background-color: white;
         }
-        #navbar>div>img{
+        #navbar>a>div>img{
             width: 170px;
         }
         #navbar>div{
@@ -30,8 +34,11 @@
             text-align: center;
             opacity: 0.7;
         }
-        #navbar>div>button{
-            width: 15%;
+        #navbar>div>a{
+            width: 13%;
+        }
+        #navbar>div>a>button{
+            width: 100%;
             border-radius: 30px;
             font-size: 14px;
             opacity: 0.7;
@@ -95,6 +102,9 @@
             margin: auto;
             margin-top: 40px;
             text-align: center;
+        }
+        #bigdis>img{
+            width: 90%;
         }
         #reviews{
             width: 74%;
@@ -243,43 +253,51 @@
         #advancesec{
             width: 70%;
             margin-left: 20px;
+            height: 450px;
             padding: 50px;
             border-radius: 40px;
-            background-color: rgb(212, 235, 243);
+            background-color: rgb(228, 241, 245);
             margin-top: 200px;
            
         }
-        #advancesec>div>h1{
+        #advancesec>div:nth-child(1)>h1{
             width: 50%;
             font-weight: bolder;
             font-family: "Open Sans", Arial;
             font-size: 45px;
             font-weight: 800;
         }
-        #advancesec>div>p{
+        #advancesec>div:nth-child(1)>p{
             width: 55%;
             font-family: "Open Sans", Arial;
             font-size: 20px;
             opacity: 0.7;
         }
-        #advancesec>div>p>span{
+        #advancesec>div:nth-child(1)>p>span{
             color: rgb(16, 79, 161);
             font-weight: bolder;
         }
-        #advancesec>div>div{
+        #advancesec>div:nth-child(1)>div{
             display: flex;
             gap: 20px;
         }
-        #advancesec>div>div>div>p{
+        #advancesec>div:nth-child(1)>div>div>p{
             font-family: "Open Sans", Arial;
             font-size: 19px;
             color: #004F6C;
             opacity: 0.6;
         }
-        #advancesec>div>div>div>p>span{
+        #advancesec>div:nth-child(1)>div>div>p>span{
             color:  rgb(35, 94, 172);
             font-size: 20px;
             font-weight: 1000;
+        }
+        #advancesec>div:nth-child(2){
+            position: relative;
+            top: -400px;
+            left: 550px;
+            border-radius: 20px;
+            background-color: white;
         }
         #diversity{
             width: 93%;
@@ -320,11 +338,184 @@
             height: 60px;
             margin-left: 40px;
         }
+        #blueback{
+            background-color: rgb(0, 153, 255);
+            color: white;
+            padding: 60px;
+            margin-top: 120px;
+        }
+        #blueback>h1{
+            font-weight: bolder;
+            font-family: "Open Sans", Arial;
+            font-size: 45px;
+            font-weight: 800;
+            display: flex;
+            gap: 15px;
+            width: 34%;
+            margin: auto;
+            }
+        #blueback>h1>div{
+            margin-top: 5px;
+        }
+        #blueback>div:nth-child(3){
+            margin-top: 80px;
+        }
+        #blueback>div:nth-child(3)>h1{
+            text-align: center;
+            font-family: "Open Sans", Arial;
+        }
+        #blueback>div:nth-child(3)>div{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-around;
+        }
+        #blueback>div:nth-child(3)>div>img{
+            width: 100px;
+        }
+        #blueback>div:nth-child(4){
+            margin-top: 80px;
+            text-align: center;
+            line-height: 10px;
+        }
+        #blueback>div:nth-child(4)>p:nth-child(2){
+            font-family: "Open Sans", Arial;
+            font-size: 24px;
+        }
+        #blueback>div:nth-child(4)>p:nth-child(2)>span:nth-child(1){
+            color: gold;
+            font-weight: 800;
+        }
+        #blueback>div:nth-child(4)>p:nth-child(2)>span:nth-child(2){
+            font-weight: 800;
+        }
+        #blueback>div:nth-child(4)>p:nth-child(3){
+            font-family: "Open Sans", Arial;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        #additional{
+            background-color: #002638;
+        }
+        #additional>div:nth-child(1){
+            width: 70%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            font-family: "Open Sans", Arial;
+        }
+        #additional>div:nth-child(1)>div{
+            width: 13%;
+            margin-top: 60px;
+        }
+        #additional>div:nth-child(1)>div>h3{
+            color: white;
+            font-size: 18px;
+        }
+        #additional>div:nth-child(1)>div>p{
+            color: #8AA2B3;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        #logos{
+            width: 55%;
+            margin: auto;
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-around;
+        }
+        #logos>div{
+            text-align: center;
+            height: 100px;
+        }
+        #logos>div>img{
+            width: auto;
+            height: 80px;
+        }
+        #last{
+            display: flex;
+            background-color: #002130;
+            border-top: 1px solid #003149;
+            padding: 35px;
+            justify-content: space-between;
+        }
+        #last>div:nth-child(2){
+            display: flex;
+            gap: 20px;
+            text-align: center;
+        }
+        #last>div:nth-child(1){
+            display: flex;
+            gap: 0px;
+            width: 30%;
+            text-align: center;
+        }
+        #last>div>div>img{
+            width: 70%;
+        }
+        #last>div>div:nth-child(1){
+            border-right: 1px solid grey;
+        }
+        #last>div>img{
+            height: 35px;
+        }
+
+
+
+
+        @media all and (min-width: 100px) and (max-width: 1000px){
+            #heading{
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            font-family: "Open Sans", Arial;
+            text-align: center;
+            }
+            #heading>h1{
+            width: auto;
+            margin: auto;
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            }
+            #inputemail{
+                width: 420px;
+                flex-direction: column;
+                height: 120px;
+                background-color: #c6e4f3;
+                border-radius: 10px;
+            }
+            #inputemail>input{
+            width: 400px;
+            margin: auto;
+            border: none;
+            height: 60px;
+            }
+            #inputemail>a{
+            width: 300px;
+            height: 50px;
+            margin: auto;
+            margin-top: 20px;
+            }
+            #reviews{
+                flex-direction: column;
+            }
+            #reviews>div>div>img{
+            width: 150px;
+            height: 30px;
+            }
+            #firstvedio{
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            justify-content: space-between;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="navbar">
-        <div><img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/ayoa_bluenavlogo.svg" alt="error"></div>
+         <a href="home.html"><div><img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/ayoa_bluenavlogo.svg" alt="error"></div></a>
         <div>
             <div>Home</div>
             <div>Why Ayoa?</div>
@@ -332,7 +523,7 @@
             <div>Inclusivity</div>
             <div>Resources</div>
             <div>Pricing</div>
-            <Button>Log In</Button>
+            <a href="signin.html"><Button>Log In</Button></a>
         </div>
     </div>
     <div id="heading">
@@ -383,31 +574,31 @@
         <p>Whether you’re brainstorming ideas, presenting in meetings, or managing tasks, Ayoa provides you with flexibility and intuitive working methods <b>every step of the way</b>.</p>
     </div>
     <div id="buttons">
-        <button>
+        <button id="firstbut">
             <img src="https://www.ayoa.com/wp-content/uploads/2020/10/organic.svg" alt="error">
             <div>Mind maps</div>
         </button>
-        <button>
+        <button id="secondbut">
             <img src="https://www.ayoa.com/wp-content/uploads/2020/10/whiteboard.svg" alt="error">
             <div>Whiteboards</div>
         </button>
-        <button>
+        <button id="thirdbut">
             <img src="https://www.ayoa.com/wp-content/uploads/2020/10/workflow.svg" alt="">
             <div>Workflow</div>
         </button>
-        <button>
+        <button id="fourthbut">
             <img src="https://www.ayoa.com/wp-content/uploads/2020/10/canvas.svg" alt="">
             <div>Canvas</div>
         </button>
-        <button>
+        <button id="fifthbut">
             <img src="https://www.ayoa.com/wp-content/uploads/2020/10/gantt.svg" alt="">
             <div>Gantt</div>
         </button>
-        <button>
+        <button id="sixthbut">
             <img src="https://www.ayoa.com/wp-content/uploads/2020/10/radial.svg" alt="">
             <div>Radial</div>
         </button>
-        <button>
+        <button id="seventhbut">
             <img src="https://www.ayoa.com/wp-content/uploads/2022/06/catpuremaps.svg" alt="">
             <div>Capture</div>
         </button>
@@ -446,7 +637,11 @@
                 </div>
             </div>
         </div>
-        <div></div>
+        <div>
+            <video width="620" height="400" controls autoplay>
+                <source src=”https://www.ayoa.com/wp-content/uploads/2021/11/generateideas.mp4” type=video/mp4>
+              </video>
+        </div>
     </div>
     <div id="diversity">
         <div>
@@ -464,5 +659,216 @@
             </div>
         </div>
     </div>
+    <div id="blueback">
+        <h1>Try <div><img src="https://www.ayoa.com/wp-content/uploads/2019/11/ayoa_logo.png" alt=""></div> today</h1>
+        <div id="inputemail">
+            <input type="text" placeholder="Enter your Email">
+            <a href="signup.html"><button>Get started</button></a>
+        </div>
+        <div>
+            <h1>Trusted by</h1>
+            <div>
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/04/amazon_logo_new.png" alt="">
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/04/samsung_logo_new.png" alt="">
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/04/oracle_logo_new.png" alt="">
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/04/continental_logo_new.png" alt="">
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/04/salesforce_logo_new.png" alt="">
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/04/aetna_logo_new.png" alt="">
+                <img src="https://www.ayoa.com/wp-content/uploads/2021/04/bbc_logo_new.png" alt="">
+            </div>
+        </div>
+        <div>
+            <img src="https://www.ayoa.com/wp-content/uploads/2020/02/Stars.png" alt="">
+            <p>Average rating of <span>4.5 stars</span> from <span>1,000+</span> reviews </p>
+            <p> across the Apple App Store, Google Play and Capterra</p>
+        </div>
+    </div>
+    <div id="additional">
+        <div>
+            <div>
+                <h3>Ayoa</h3>
+                <p>Features</p>
+                <p>Why Ayoa?</p>
+                <p>About Us</p>
+                <p>Pricing</p>
+                <p>Integrations</p>
+                <p>Security</p>
+                <h3>News</h3>
+                <p>Blog</p>
+                <p>Press</p>
+                <p>Roadmap</p>
+                <p>Release Notes</p>
+            </div>
+            <div>
+                <h3>Use Cases</h3>
+                <p>Task Management</p>
+                <p>Mind Mapping</p>
+                <p>Project Management</p>
+                <p>Marketing</p>
+                <p>Finance</p>
+                <p>Education</p>
+                <p>Neurodiversity</p>
+                <p>All Use Cases</p>
+                <p>Template Library </p>
+                <p>Customer Success Stories</p>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <p>Help</p>
+                <p>FAQ</p>
+                <p>Contact Us</p>
+                <p>Free Demos & Webinars</p>
+                <p>Where is DropTask?</p>
+                <p>How to Mind Map</p>
+            </div>
+            <div>
+                <h3>Serives</h3>
+                <p>Applied Innovation Training</p>
+                <p>Trainers</p>
+                <p>Keynote Speaker</p>
+                <p>Partnership Programs</p>
+                <p>Decision Radar Profiler</p>
+                <h3>Legal</h3>
+                <p>Terms and COndition</p>
+                <p>Privacy Policy</p>
+                <p>License Agreement</p>
+                <p>Use Policy</p>
+            </div>
+            <div>
+                <h3>Download</h3>
+                <p>Android </p>
+                <p>iPhone</p>
+                <p>iPad</p>
+                <p>Windows (Desktop)</p>
+                <p>Mac (Desktop)</p>
+                <p>All Apps</p>
+            </div>
+        </div>
+        <div id="logos">
+            <div>
+                <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/combined_logos.png" alt="">
+            </div>
+            <div>
+                <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/gcloudsupplier@2x.png" alt="">
+            </div>
+            <div>
+                <img src="https://www.ayoa.com/wp-content/uploads/2022/06/bata_logo-250.png" alt="">
+            </div>
+            <div>
+                <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/bda_assured@2x.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="last">
+        <div>
+            <div>
+                <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/ayoa.svg" alt="error">
+            </div>
+            <div>
+                <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/opengenius_logo.svg" alt="error">
+            </div>
+        </div>
+        <div>
+            <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/twitter.png" alt="">
+            <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/facebook.png" alt="">
+            <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/youtube.png" alt="">
+            <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/instagram.png" alt="">
+            <img src="https://www.ayoa.com/wp-content/themes/droptaskreload/navigation/images/linkedin.png" alt="">
+        </div>
+    </div>
+   
 </body>
 </html>
+<script>
+    document.querySelector("#secondbut").addEventListener("click", function1);
+    function function1(){
+        let mainhead = document.querySelector("#buttonsdiv>div>div>h1");
+        mainhead.innerHTML = "Whiteboards";
+        let mainpara = document.querySelector("#buttonsdiv>div>div>p");
+        mainpara.innerHTML = "Use whiteboards for freeform thinking or to create content dashboards. Add post-it notes, images, flowcharts, links, videos and more."
+        let head3 = document.querySelector("#buttonsdiv>div>div>div>h3");
+        head3.innerHTML = "How to use whiteboards";
+        let head3para = document.querySelector("#buttonsdiv>div>div>div>p");
+        head3para.innerHTML = "01:56";
+        let image = document.querySelector("#buttonsdiv>div>img");
+        image.setAttribute("src", "https://www.ayoa.com/wp-content/uploads/2021/03/Unrivaled_wb_new_webp_2.webp")
+    }
+    document.querySelector("#thirdbut").addEventListener("click", function2);
+    function function2(){
+        let mainhead = document.querySelector("#buttonsdiv>div>div>h1");
+        mainhead.innerHTML = "Workflow";
+        let mainpara = document.querySelector("#buttonsdiv>div>div>p");
+        mainpara.innerHTML = "Inspired by the traditional Kanban board, this visual task board view lets you manage your projects and workflows in a clear, linear way."
+        let head3 = document.querySelector("#buttonsdiv>div>div>div>h3");
+        head3.innerHTML = "How to use workflow";
+        let head3para = document.querySelector("#buttonsdiv>div>div>div>p");
+        head3para.innerHTML = "02:02";
+        let image = document.querySelector("#buttonsdiv>div>img");
+        image.setAttribute("src", "https://www.ayoa.com/wp-content/uploads/2021/03/Unrivaled_kanban_new_webp.webp")
+    }
+    document.querySelector("#fourthbut").addEventListener("click", function3);
+    function function3(){
+        let mainhead = document.querySelector("#buttonsdiv>div>div>h1");
+        mainhead.innerHTML = "Canvas";
+        let mainpara = document.querySelector("#buttonsdiv>div>div>p");
+        mainpara.innerHTML = "Discover a more creative way to manage your tasks. Canvas view makes it easy to visualize your work in a fun circular format."
+        let head3 = document.querySelector("#buttonsdiv>div>div>div>h3");
+        head3.innerHTML = "How to use canvas";
+        let head3para = document.querySelector("#buttonsdiv>div>div>div>p");
+        head3para.innerHTML = "02:17";
+        let image = document.querySelector("#buttonsdiv>div>img");
+        image.setAttribute("src", "https://www.ayoa.com/wp-content/uploads/2021/03/Unrivaled_canvas_new_webp.webp")
+    }
+    document.querySelector("#fifthbut").addEventListener("click", function4);
+    function function4(){
+        let mainhead = document.querySelector("#buttonsdiv>div>div>h1");
+        mainhead.innerHTML = "Gantt Timeline";
+        let mainpara = document.querySelector("#buttonsdiv>div>div>p");
+        mainpara.innerHTML = "Working on a project with multiple milestones? View your tasks in clear and easily adaptable Gantt timeline mode."
+        let head3 = document.querySelector("#buttonsdiv>div>div>div>h3");
+        head3.innerHTML = "How to use gantt timeline";
+        let head3para = document.querySelector("#buttonsdiv>div>div>div>p");
+        head3para.innerHTML = "01:14";
+        let image = document.querySelector("#buttonsdiv>div>img");
+        image.setAttribute("src", "https://www.ayoa.com/wp-content/uploads/2021/03/Unrivaled_gantt_new_webp.webp")
+    }
+    document.querySelector("#sixthbut").addEventListener("click", function5);
+    function function5(){
+        let mainhead = document.querySelector("#buttonsdiv>div>div>h1");
+        mainhead.innerHTML = "Radial";
+        let mainpara = document.querySelector("#buttonsdiv>div>div>p");
+        mainpara.innerHTML = "Ready to make every goal a reality? Present your aims and ideas in a visual pie-chart and stay motivated by seeing your priorities at a glance."
+        let head3 = document.querySelector("#buttonsdiv>div>div>div>h3");
+        head3.innerHTML = "How to use radial maps";
+        let head3para = document.querySelector("#buttonsdiv>div>div>div>p");
+        head3para.innerHTML = "01:59";
+        let image = document.querySelector("#buttonsdiv>div>img");
+        image.setAttribute("src", "https://www.ayoa.com/wp-content/uploads/2021/03/Unrivaled_radial_new_webp.webp")
+    }
+    document.querySelector("#seventhbut").addEventListener("click", function6);
+    function function6(){
+        let mainhead = document.querySelector("#buttonsdiv>div>div>h1");
+        mainhead.innerHTML = "Capture maps";
+        let mainpara = document.querySelector("#buttonsdiv>div>div>p");
+        mainpara.innerHTML = "Capture maps are the quickest and easiest way to capture notes and ideas. Great for brainstorming and note making."
+        let head3 = document.querySelector("#buttonsdiv>div>div>div>h3");
+        head3.innerHTML = "How to use capture maps";
+        let head3para = document.querySelector("#buttonsdiv>div>div>div>p");
+        head3para.innerHTML = "01:35";
+        let image = document.querySelector("#buttonsdiv>div>img");
+        image.setAttribute("src", "https://www.ayoa.com/wp-content/uploads/2022/06/capturemaps.webp")
+    }
+    document.querySelector("#firstbut").addEventListener("click", function7);
+    function function7(){
+        let mainhead = document.querySelector("#buttonsdiv>div>div>h1");
+        mainhead.innerHTML = "Mind maps";
+        let mainpara = document.querySelector("#buttonsdiv>div>div>p");
+        mainpara.innerHTML = "Mind Mapping is proven to boost productivity, creativity and memory. Grow ideas, structure information, and see the whole picture."
+        let head3 = document.querySelector("#buttonsdiv>div>div>div>h3");
+        head3.innerHTML = "How to use mind maps";
+        let head3para = document.querySelector("#buttonsdiv>div>div>div>p");
+        head3para.innerHTML = "02:22";
+        let image = document.querySelector("#buttonsdiv>div>img");
+        image.setAttribute("src", "https://www.ayoa.com/wp-content/uploads/2021/03/Unrivaled_mm_new_webp.webp")
+    }
+</script>

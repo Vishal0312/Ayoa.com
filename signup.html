@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ayoa</title>
     <style>
         body{
             margin: auto;
@@ -55,37 +55,36 @@
         #leftside>div:nth-child(3)>div,#leftside>div:nth-child(4)>div,#leftside>div:nth-child(5)>div{
             width: 50%;
             font-size: 12px;
-
         }
         #rightside{
             width: 70%;
         }
         #rightside>div:nth-child(1){
-            width: 35%;
+            width: 300px;
             border: 0px solid black;
             margin: auto;
             text-align: center;
             margin-top: 30px;
         }
         #rightside>div:nth-child(3){
-            width: 35%;
+            width: 300px;
             border: 0px solid black;
             margin: auto;
             text-align: center;
             margin-top: -10px;
         }
         #rightside>div:nth-child(4){
-            width: 35%;
+            width: 300px;
             border: 0px solid black;
             margin: auto;
             text-align: center;
             margin-top: 30px;
         }
-        #rightside>div>img{
+        #rightside>div:nth-child(1)>img{
             width: 235px;
         }
         #rightside>form{
-            width: 45%;
+            width: 400px;
             border: 0px solid black;
             padding: 30px;
             margin: auto;
@@ -152,6 +151,7 @@
             border-radius: 20px;
             width: 50%;
             display: flex;
+            background-color: white;
             padding: 5px;
             justify-content: space-around;
             border: 1px solid grey;
@@ -179,6 +179,78 @@
         }
         #bottom>h4>a{
             margin-left: 10px;
+        }
+        #foot{
+            width: 30%;
+            margin: auto;
+            border-top: 1px solid rgb(226, 218, 218);
+            position: sticky;
+            bottom: 0px;
+            z-index: 1000;
+            background-color: white;
+            text-align: center;
+        }
+        #foot>img{
+            width: 50%;
+            margin: auto;
+            height: 50px;
+        }
+
+
+        @media all and (min-width: 100px) and (max-width: 1000px){
+            body{
+            margin: auto;
+            display: flex;
+            flex-direction: column-reverse;
+            }
+            #leftside{
+            width: 100%;
+            background-color: rgb(61, 152, 236);
+            color: aliceblue;
+            padding-bottom: 50px;
+
+            font-family: "Open Sans", Arial;
+            }
+            #leftside>div:nth-child(1){
+            text-align: center;
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+            }
+            #leftside>div:nth-child(2){
+            text-align: center;
+            width: 400px;
+            margin: auto;
+            opacity: 0.8;
+            }
+            #leftside>div:nth-child(3),#leftside>div:nth-child(4),#leftside>div:nth-child(5){
+            display: flex;
+            gap: 10px;
+            width: 400px;
+            margin: auto;
+            margin-top: 30px;
+            }
+            #leftside>div:nth-child(3)>img,#leftside>div:nth-child(4)>img,#leftside>div:nth-child(5)>img{
+            width: 120px;
+            height: 50px;
+            margin-top: 40px;
+            }
+            #leftside>div:nth-child(3)>div,#leftside>div:nth-child(4)>div,#leftside>div:nth-child(5)>div{
+            width: 200px;
+            font-size: 12px;
+            }
+            #rightside{
+            width: 450px;
+            margin: auto;
+            }
+            #foot{
+                width: 100%;
+            }
+            #foot>img{
+                width: 150px;
+                margin: auto;
+                height: 50px;
+            }
         }
     </style>
 </head>
@@ -217,9 +289,9 @@
         <div><img src="https://auth.ayoa.com/images/ayoa-icon-logo.png" alt="error"></div>
         <form>
             <h2>Create your account below to get started</h2>
-            <input type="text" placeholder="First and last name">
-            <input type="text" placeholder="Email address">
-            <input type="password" placeholder="Create password">
+            <input type="text" id="name" placeholder="First and last name">
+            <input type="text" id="email" placeholder="Email address">
+            <input type="password" id="password" placeholder="Create password">
             <div>
                 <input type="checkbox"> <p>I agree to the Ayoa Terms & Conditions, License Agreement, Privacy Policy and consent to receive relevant marketing communications. I understand that I am able to change my email preferences at any time.</p>
             </div>
@@ -234,9 +306,35 @@
             </div>
         </div>
         <div id="bottom">
-            <h4>Don't have an account? <a href="signin.html">Sign in</a></h5>
+            <h4>Already have an account? <a href="signin.html">Sign in</a></h5>
             <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
         </div>
+        <div id="foot">
+            <img src="https://auth.ayoa.com/images/og_logo.svg" alt="">
+        </div>
     </div>
+    
 </body>
 </html>
+<script>
+    document.querySelector("form").addEventListener("submit", function1);
+    let data = JSON.parse(localStorage.getItem("LSData")) || [];
+    function function1(){
+        event.preventDefault();
+        let names = document.querySelector("#name").value;
+        let emails = document.querySelector("#email").value;
+        let passwords = document.querySelector("#password").value;
+        let object = {
+            name: names,
+            email: emails,
+            password: passwords,
+        }
+        if(object[name]==="" || object[email]==="" || object[password]===""){
+            alert("Empty Field");
+        } else {
+            data.push(object);
+            localStorage.setItem("LSData", JSON.stringify(data));
+        }
+        
+    }
+</script>
