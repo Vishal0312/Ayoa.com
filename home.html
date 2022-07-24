@@ -131,11 +131,9 @@
             margin-top: 100px;
             justify-content: space-between;
         }
-        #firstvedio>div{
-            width: 50%;
-        }
+       
         #firstvedio>div:nth-child(1)>img{
-            width: 30%;
+            width: 300px;
             justify-content: center;
         }
         #firstvedio>div+div>h1{
@@ -233,9 +231,6 @@
             width: 90%;
             opacity: 0.6;   
         }
-        #buttonsdiv>div{
-            width: 50%;
-        }
         #buttonsdiv>div>div+div{
             display: flex;
             gap: 24px;
@@ -298,6 +293,7 @@
             left: 550px;
             border-radius: 20px;
             background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
         #diversity{
             width: 93%;
@@ -507,8 +503,17 @@
             #firstvedio{
             display: flex;
             flex-direction: column;
+            width: 500px;
+            margin: auto;
             margin-top: 100px;
             justify-content: space-between;
+            }
+            #firstvedio>div>img{
+                width: 100px;
+            }
+            #buttonsdiv{
+                flex-direction: column;
+                margin: auto;
             }
         }
     </style>
@@ -557,8 +562,8 @@
     </div>
     <div id="firstvedio">
         <div>
-            <video width="620" height="340" controls autoplay>
-                <source src=”https://www.ayoa.com/wp-content/uploads/2019/07/ayoa_webcut_video.mp4” type=video/mp4>
+            <video width="620" height="340" loop autoplay muted>
+                <source src="https://www.ayoa.com/wp-content/uploads/2019/07/ayoa_webcut_video.mp4" type=video/mp4>
               </video>
         <img src="https://www.ayoa.com/wp-content/uploads/2019/07/clicktowatchfull_drkblue@2x.png" alt="">
         </div>
@@ -638,8 +643,8 @@
             </div>
         </div>
         <div>
-            <video width="620" height="400" controls autoplay>
-                <source src=”https://www.ayoa.com/wp-content/uploads/2021/11/generateideas.mp4” type=video/mp4>
+            <video width="620" height="400" loop autoplay muted>
+                <source src="https://www.ayoa.com/wp-content/uploads/2021/11/generateideas.mp4" type=video/mp4>
               </video>
         </div>
     </div>
