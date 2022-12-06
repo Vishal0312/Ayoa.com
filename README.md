@@ -1,4 +1,4 @@
-# soft-dogs-2567
+# Ayoa.com
 Ayoa.com is world’s most visual productivity app. Supercharge thinking, planning and learning with AI, mind maps, task boards and more.
 
 ---
@@ -26,6 +26,16 @@ This project was built in 5 Days.
 - HTML
 - CSS
 - Git
+
+
+### Features
+
+---
+
+- Landing Page
+- Login
+- Signup
+- Working click in flexibility part
 
 ### Screenshots
 
